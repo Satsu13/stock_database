@@ -2,7 +2,7 @@ class DesignAxi < ApplicationRecord
   belongs_to :version
   belongs_to :parameter
   
-  attr_accessor :minimumValue
-  attr_accessor :maximumValue
-  attr_accessor :resolution
+  has_and_belongs_to_many :arguments
+  
+  attr_accessor :name
 end
