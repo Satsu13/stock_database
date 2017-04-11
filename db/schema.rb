@@ -10,51 +10,79 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170407012419) do
+ActiveRecord::Schema.define(version: 20170411034327) do
 
   create_table "arguments", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "parameter_id"
+    t.integer  "simulation_id"
+    t.index ["parameter_id"], name: "index_arguments_on_parameter_id"
+    t.index ["simulation_id"], name: "index_arguments_on_simulation_id"
   end
 
   create_table "design_axis", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "version_id"
+    t.integer  "parameter_id"
+    t.string   "name"
+    t.index ["parameter_id"], name: "index_design_axis_on_parameter_id"
+    t.index ["version_id"], name: "index_design_axis_on_version_id"
   end
 
   create_table "mature_investments", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "simulation_id"
+    t.index ["simulation_id"], name: "index_mature_investments_on_simulation_id"
+  end
+
+  create_table "mature_investments_stock_days", id: false, force: :cascade do |t|
+    t.integer "mature_investment_id", null: false
+    t.integer "stock_day_id",         null: false
   end
 
   create_table "models", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "name"
   end
 
   create_table "parameters", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "name"
   end
 
   create_table "simulations", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "version_id"
+    t.index ["version_id"], name: "index_simulations_on_version_id"
   end
 
   create_table "stock_days", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "stock_history_id"
+    t.float    "value"
+    t.date     "date"
+    t.index ["stock_history_id"], name: "index_stock_days_on_stock_history_id"
   end
 
   create_table "stock_histories", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "ticker"
   end
 
   create_table "versions", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "model_id"
+    t.integer  "number"
+    t.index ["model_id"], name: "index_versions_on_model_id"
   end
 
 end
