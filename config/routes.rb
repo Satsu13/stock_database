@@ -1,3 +1,11 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :arguments
+  resources :design_axis
+  resources :mature_investments
+  resources :models
+  resources :parameters
+  resources :simulations
+  resources :stock_days
+  resources :stock_histories
+  resources :versions
 end
