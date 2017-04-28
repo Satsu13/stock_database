@@ -1,0 +1,2 @@
+class StockDay < ApplicationRecord
+end

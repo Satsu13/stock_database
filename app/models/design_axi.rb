@@ -1,0 +1,2 @@
+class DesignAxi < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class MatureInvestment < ApplicationRecord
+end
