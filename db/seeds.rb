@@ -6,5 +6,5 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-stock_history = StockHistory.create(ticker: "test_stock_history")
-
+stock_history = StockHistory.create(ticker: 'test_stock_history')
+stock_history.save
