@@ -4,5 +4,4 @@ class DesignAxi < ApplicationRecord
   
   has_and_belongs_to_many :arguments
   
-  attr_accessor :name
 end

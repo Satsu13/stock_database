@@ -3,6 +3,4 @@ class Version < ApplicationRecord
   
   has_many :design_axis
   has_many :simulations
-  
-  attr_accessor :number
 end
