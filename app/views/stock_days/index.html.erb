@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Stock Days</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Date</th>
+      <th>Stock historystory</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stock_days.each do |stock_day| %>
+      <tr>
+        <td><%= stock_day.value %></td>
+        <td><%= stock_day.date %></td>
+        <td><%= stock_day.stock_historystory %></td>
+        <td><%= link_to 'Show', stock_day %></td>
+        <td><%= link_to 'Edit', edit_stock_day_path(stock_day) %></td>
+        <td><%= link_to 'Destroy', stock_day, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stock Day', new_stock_day_path %>

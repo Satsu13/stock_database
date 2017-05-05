@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  value: 1.5
+  date: 2017-05-05
+  stock_historystory: one
+
+two:
+  value: 1.5
+  date: 2017-05-05
+  stock_historystory: two
