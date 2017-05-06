@@ -7,5 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 history = StockHistory.create(ticker: 'test_history')
-StockDay.create(date: Date.parse('09/14/2009'), value: 5.0, stock_history: history)
-StockDay.create(date: Date.parse('09/15/2009'), value: 4.0, stock_history: history)
+StockDay.create(date: DateTime.new(2015, 6, 22), value: 5.0, stock_history: history)
+StockDay.create(date: DateTime.new(2015, 6, 23), value: 4.0, stock_history: history)
