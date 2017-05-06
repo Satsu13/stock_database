@@ -69,6 +69,6 @@ class StockDaysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def stock_day_params
-      params.require(:stock_day).permit(:value, :date, :stock_historystory_id)
+      params.require(:stock_day).permit(:value, :date, :stock_history_id)
     end
 end

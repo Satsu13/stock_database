@@ -17,7 +17,7 @@ class StockDaysControllerTest < ActionDispatch::IntegrationTest
 
   test "should create stock_day" do
     assert_difference('StockDay.count') do
-      post stock_days_url, params: { stock_day: { date: @stock_day.date, stock_historystory_id: @stock_day.stock_historystory_id, value: @stock_day.value } }
+      post stock_days_url, params: { stock_day: { date: @stock_day.date, stock_history_id: @stock_day.stock_history_id, value: @stock_day.value } }
     end
 
     assert_redirected_to stock_day_url(StockDay.last)
@@ -34,7 +34,7 @@ class StockDaysControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update stock_day" do
-    patch stock_day_url(@stock_day), params: { stock_day: { date: @stock_day.date, stock_historystory_id: @stock_day.stock_historystory_id, value: @stock_day.value } }
+    patch stock_day_url(@stock_day), params: { stock_day: { date: @stock_day.date, stock_history_id: @stock_day.stock_history_id, value: @stock_day.value } }
     assert_redirected_to stock_day_url(@stock_day)
   end
 

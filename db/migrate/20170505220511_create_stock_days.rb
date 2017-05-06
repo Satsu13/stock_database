@@ -3,7 +3,7 @@ class CreateStockDays < ActiveRecord::Migration[5.0]
     create_table :stock_days do |t|
       t.float :value
       t.date :date
-      t.references :stock_historystory, foreign_key: true
+      t.references :stock_history, foreign_key: true
 
       t.timestamps
     end
