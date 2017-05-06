@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :parameters
   resources :mature_investments
   resources :simulations
   resources :versions
