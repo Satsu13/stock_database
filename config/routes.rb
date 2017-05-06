@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :versions
   resources :models
   resources :stock_days
   resources :stock_histories
