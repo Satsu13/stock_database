@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mature Investments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Simulation</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mature_investments.each do |mature_investment| %>
+      <tr>
+        <td><%= mature_investment.simulation %></td>
+        <td><%= link_to 'Show', mature_investment %></td>
+        <td><%= link_to 'Edit', edit_mature_investment_path(mature_investment) %></td>
+        <td><%= link_to 'Destroy', mature_investment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mature Investment', new_mature_investment_path %>

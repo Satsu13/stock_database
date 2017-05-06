@@ -1,0 +1,2 @@
+module MatureInvestmentsHelper
+end
