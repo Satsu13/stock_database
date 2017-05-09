@@ -1,0 +1,32 @@
+<%= form_for(stock_day) do |f| %>
+  <% if stock_day.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(stock_day.errors.count, "error") %> prohibited this stock_day from being saved:</h2>
+
+      <ul>
+      <% stock_day.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :value %>
+    <%= f.text_field :value %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date %>
+    <%= f.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :stock_history_id %>
+    <%= f.text_field :stock_history_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

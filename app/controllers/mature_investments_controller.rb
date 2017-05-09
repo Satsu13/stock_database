@@ -1,0 +1,2 @@
+class MatureInvestmentsController < ApplicationController
+end

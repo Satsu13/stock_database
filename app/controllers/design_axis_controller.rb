@@ -1,0 +1,2 @@
+class DesignAxisController < ApplicationController
+end

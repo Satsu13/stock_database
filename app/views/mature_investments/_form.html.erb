@@ -1,0 +1,22 @@
+<%= form_for(mature_investment) do |f| %>
+  <% if mature_investment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mature_investment.errors.count, "error") %> prohibited this mature_investment from being saved:</h2>
+
+      <ul>
+      <% mature_investment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :simulation_id %>
+    <%= f.text_field :simulation_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

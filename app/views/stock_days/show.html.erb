@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @stock_day.value %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @stock_day.date %>
+</p>
+
+<p>
+  <strong>Stock history:</strong>
+  <%= @stock_day.stock_history %>
+</p>
+
+<%= link_to 'Edit', edit_stock_day_path(@stock_day) %> |
+<%= link_to 'Back', stock_days_path %>

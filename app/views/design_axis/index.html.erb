@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Design Axis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Parameter</th>
+      <th>Version</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @design_axis.each do |design_axi| %>
+      <tr>
+        <td><%= design_axi.name %></td>
+        <td><%= design_axi.parameter %></td>
+        <td><%= design_axi.version %></td>
+        <td><%= link_to 'Show', design_axi %></td>
+        <td><%= link_to 'Edit', edit_design_axi_path(design_axi) %></td>
+        <td><%= link_to 'Destroy', design_axi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Design Axi', new_design_axi_path %>
